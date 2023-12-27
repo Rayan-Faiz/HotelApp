@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="rf.hotel.MainController"
+      alignment="CENTER"
+      spacing="10">
+    <Label text="Hotel Manager" style="-fx-font-weight: bold; -fx-alignment: center; -fx-font-size: 30px;" BorderPane.alignment="CENTER"/>
+    <Button text="Manage Employees" onAction="#EmployeeManagerLaunch" prefWidth="150" prefHeight="30"/>
+    <Button text="Manage Clients" onAction="#ClientManagerLaunch" prefWidth="150" prefHeight="30"/>
+    <Button text="Manage Rooms" onAction="#RoomManagerLaunch" prefWidth="150" prefHeight="30"/>
+    <Button text="Manage Reservations" onAction="#ResaManagerLaunch" prefWidth="150" prefHeight="30"/>
+    <Button text="Exit" onAction="#quit"/>
+</VBox>
