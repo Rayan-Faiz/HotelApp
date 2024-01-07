@@ -13,7 +13,6 @@ Objectif du Projet
     <li>Gestion de la Disponibilité des Chambres/Suites : Suivi en temps réel de la disponibilité des chambres et suites.</li>
     <li>Gestion et Suivi des Réservations : Création, mise à jour et annulation des réservations, suivi des statuts.</li>
     <li>Exportation et Importation des Employés : Possibilité d'exporter/importer des données d'employés au format Excel ou CSV.</li>
-    <li>... (Autres fonctionnalités à définir)</li>
  </ul> </p>
   
   <li>Partie Front-office :</li>
@@ -23,7 +22,6 @@ Objectif du Projet
     <li>Inscription des Clients : Création de comptes clients avec des informations de base.
     <li>Réservation avec Confirmation par Mail : Possibilité de réserver des chambres/suites avec envoi automatique de confirmations par e-mail.</li>
     <li>Édition PDF du Bon de Réservation : Génération d'un bon de réservation au format PDF pour les clients.</li>
-    <li>... (D'autres fonctionnalités à définir)</li>
   </ul></p>
 
   
@@ -49,12 +47,7 @@ Objectif du Projet
   <p><ul>
     <li>L'application doit être sécurisée pour garantir la confidentialité des données.</li>
     <li> Respect des normes de développement et des bonnes pratiques de codage.</li>
-    <li>L'échéancier prévisionnel pour la livraison du projet est fixé au [insérer la date de livraison prévue].</li>
+    <li>L'échéancier prévisionnel pour la livraison du projet est fixé pour le 07/01/2024.</li>
   </ul></p>
   
-  <li>Notes Additionnelles :</li>
-  <p><ul>
-    <li>Des réunions régulières seront tenues pour le suivi du développement.</li>
-    <li>Toute modi fication ou ajout de fonctionnalité en cours de développement doit être approuvé par le [insérer le responsable du projet/client].</li>
-  </ul></p>
 </ol>
