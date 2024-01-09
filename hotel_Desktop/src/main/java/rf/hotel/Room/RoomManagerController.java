@@ -74,20 +74,27 @@ public class RoomManagerController {
                 Float price = Float.valueOf(resultSet.getString("rm_price"));
 
                 // Verify status
-                String q = "SELECT COUNT(*) AS count, rs_end AS endresa FROM resa WHERE rm_number = ?";
+                String q = "SELECT COUNT(*) AS count, rs_end AS endresa, rs_start AS startresa FROM resa WHERE rm_number = ?";
                 PreparedStatement prepStatement = connection.prepareStatement(q);
                 prepStatement.setInt(1, number);
                 rs = prepStatement.executeQuery();
                 while (rs.next()) {
                     int count = rs.getInt("count");
-                    if(rs.getDate("endresa") != null) {
+                    if(rs.getDate("startresa") != null && rs.getDate("endresa") != null) {
                         LocalDate endResa = rs.getDate("endresa").toLocalDate();
+                        LocalDate startResa = rs.getDate("startresa").toLocalDate();
                         if (status == true && count != 0 && endResa.isAfter(LocalDate.now())) {
                             q = "UPDATE rooms SET rm_status = 0 WHERE rm_number = ?";
                             prepStatement = connection.prepareStatement(q);
                             prepStatement.setInt(1, number);
                             prepStatement.executeUpdate();
                             status = false;
+                        }else if (status == false && count != 0 && startResa.isAfter(LocalDate.now())) {
+                            q = "UPDATE rooms SET rm_status = 1 WHERE rm_number = ?";
+                            prepStatement = connection.prepareStatement(q);
+                            prepStatement.setInt(1, number);
+                            prepStatement.executeUpdate();
+                            status = true;
                         }
                     }else if (status == false && count == 0) {
                         q = "UPDATE rooms SET rm_status = 1 WHERE rm_number = ?";
